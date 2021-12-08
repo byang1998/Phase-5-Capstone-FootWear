@@ -41,7 +41,7 @@ function EditShoe({ currentUser, db, setDb, handleDeleteShoe, shoe, showEditShoe
     }
 
     function handleDeleteFetch(id){
-        fetch(`http://localhost:4000/shoes/${shoe.id}`, {
+        fetch(`/shoes/${shoe.id}`, {
             method: 'DELETE',
         })
         .then((r) => r.json())

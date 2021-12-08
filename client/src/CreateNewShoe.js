@@ -18,7 +18,7 @@ function CreateNewShoe({ currentUser, handleAddShoe, db, setDb, showAdd, setShow
         e.preventDefault();
 
         // debugger
-        fetch('http://localhost:4000/shoes', {
+        fetch('/shoes', {
             method: 'POST',
             headers: { 
                 'Content-Type': 'application/json',

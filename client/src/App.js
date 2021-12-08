@@ -21,7 +21,7 @@ function App() {
     console.log("localStorage UserId", userId);
 
     if (userId) {
-    fetch(`http://localhost:4000/account/${parseInt(userId)}`)
+    fetch(`/account/${parseInt(userId)}`)
     .then((r) => r.json())
     .then((user) => {
       setCurrentUser(user);
@@ -30,7 +30,7 @@ function App() {
   }, [userId]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/databases")
+    fetch("/databases")
     .then((r) => r.json())
     .then((data) => setDb(data))
 }, []);

@@ -15,7 +15,7 @@ function Profile({ currentUser, setCurrentUser, editAccount }){
     console.log(currentUser)
 
     function handleSubmit(e){
-        fetch(`http://localhost:4000/users/${currentUser.id}`, {
+        fetch(`/users/${currentUser.id}`, {
             method: 'PATCH',
             headers: {
                 "Content-Type": "application/json",
@@ -36,7 +36,7 @@ function Profile({ currentUser, setCurrentUser, editAccount }){
     }
 
     function handleDelete(id){
-        fetch(`http://localhost:4000/users/${currentUser.id}`, {
+        fetch(`/users/${currentUser.id}`, {
             method: 'DELETE',
         })
         .then((r) => r.json())

@@ -9,13 +9,13 @@ function Account({ currentUser, db, setDb }){
     const [showAdd, setShowAdd] = useState(false);
 
     useEffect(() => {
-        fetch("http://localhost:4000/shoes")
+        fetch("/shoes")
         .then((r) => r.json())
         .then((data) => setShoes(data))
     }, []);
 
     useEffect(() => {
-        fetch("http://localhost:4000/logs")
+        fetch("/logs")
         .then((r) => r.json())
         .then((data) => setLogs(data))
     }, []);

@@ -10,6 +10,7 @@ Shoe.destroy_all
 User.destroy_all
 Database.destroy_all
 
+puts "Creating database"
 #Database Seeds
 Database.create(image: "https://cdn.flightclub.com/750/TEMPLATE/012234/1.jpg", name: "AIR JORDAN 1 RETRO HIGH OG 'CHICAGO' 2015", description: "The Air Jordan 1 Retro High OG 'Chicago' 2015 colorway features full-leather uppers in Bulls team colors")
 Database.create(image: "https://cdn.flightclub.com/2200/TEMPLATE/011859/1.jpg", name: "AIR JORDAN 3 RETRO 'POWDER BLUE", description: "The Air Jordan 3 Retro 'Powder Blue' dresses Michael Jordan's third signature shoe in a vibrant Dark Powder Blue, which emerges on the upper's mix of leather and suede")
@@ -33,10 +34,12 @@ Database.create(image: "https://cdn.flightclub.com/2200/TEMPLATE/012457/1.jpg", 
 Database.create(image: "https://cdn.flightclub.com/750/TEMPLATE/800391/1.jpg", name: "AIR JORDAN 13 RETRO 'CHICAGO' 2017", description: "The Air Jordan 13 Retro 'Chicago' 2017 brought the OG 'Chicago' colorway back to the Jordan 13 silhouette")
 Database.create(image: "https://cdn.flightclub.com/2200/TEMPLATE/152814/1.jpg", name: "AIR JORDAN 11 RETRO 'BRED' 2019", description: "The shoe's upper is built with a mix of mesh and patent leather, all finished in black, save for the Varsity Red Jumpman and white 23")
 
+puts "Creating user"
 #User Seeds
 User.create(username: "first", password_digest: "first", name: "first")
 User.create(username: "second", password_digest: "second", name: "second")
 
+puts "Creating shoe"
 #Shoe Seeds
 Shoe.create(shoe_name: "AIR JORDAN 1 RETRO HIGH OG 'CHICAGO' 2015", user_id: 1, database_id: 4)
 Shoe.create(shoe_name: "AIR JORDAN 3 RETRO 'POWDER BLUE", user_id: 1, database_id: 37)
@@ -46,6 +49,7 @@ Shoe.create(shoe_name: "AIR JORDAN 12 RETRO 'GYM RED", user_id: 1, database_id: 
 
 
 
+puts "Creating log"
 #Log Seeds
 Log.create(date: "01/01/2021", entry: "Wore with red.", shoe_id: 1)
 Log.create(date: "02/02/2021", entry: "Wore with blue", shoe_id: 1)

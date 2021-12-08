@@ -18,7 +18,7 @@ function EditLogForm({ currentUser, log, shoeId, shoe, entry, setEdit, handleDel
             entry: ""
         })
 
-        fetch(`http://localhost:4000/logs/${log.id}`, {
+        fetch(`/logs/${log.id}`, {
             method: 'PATCH',
             headers: { 
                 'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ function EditLogForm({ currentUser, log, shoeId, shoe, entry, setEdit, handleDel
     }
 
     function handleDeleteFetch(id){
-        fetch(`http://localhost:4000/logs/${log.id}`, {
+        fetch(`/logs/${log.id}`, {
             method: 'DELETE',
         })
         .then((r) => r.json())

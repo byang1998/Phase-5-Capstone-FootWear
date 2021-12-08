@@ -19,7 +19,7 @@ function AddLogForm({ shoe, currentUser, handleAddLog, showAddLogForm, setShowAd
             entry: ""
         })
 
-        fetch('http://localhost:4000/logs', {
+        fetch('/logs', {
             method: 'POST',
             headers: { 
                 'Content-Type': 'application/json',

@@ -15,7 +15,7 @@ function CreateAccount({ setCurrentUser, newAccount }){
     function handleSubmit(e) {
         e.preventDefault()
 
-        fetch("http://localhost:4000/users", {
+        fetch("/users", {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
